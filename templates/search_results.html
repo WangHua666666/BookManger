@@ -1,0 +1,39 @@
+<!-- search_results.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>搜索结果</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <h1>搜索结果</h1>
+    <ul>
+        {% if books %}  <!-- 检查是否有图书数据 -->
+            {% for book in books %}
+            <li>
+                <div class="book-item">
+                    <h2>{{ book.book_name }}</h2>
+                    <p>图书编号: {{ book.id }}</p>
+                    <p>作者: {{ book.book_authors }}</p>
+                    <p>出版社: {{ book.book_publisher }}</p>
+                    <p>出版日期: {{ book.book_publication_date }}</p>
+                    <p>价格: {{ book.book_price }}</p>
+                    <img src="{{ book.book_img_url }}" alt="{{ book.book_name }}" width="100">
+                    <!-- 更新按钮，链接到更新页面 -->
+                    <a href="{{ url_for('edit_book', book_id=book.id) }}" class="button">更新</a>
+                    <!-- 删除按钮，链接到删除操作 -->
+                    <a href="{{ url_for('delete_book', book_id=book.id) }}" class="button" onclick="return confirm('确定要删除吗？')">删除</a>
+                </div>
+            </li>
+            {% endfor %}
+        {% else %}
+            <li>没有找到相关图书。</li>  <!-- 如果没有图书数据，显示提示信息 -->
+        {% endif %}
+    </ul>
+    <a href="{{ url_for('index') }}" class="button">返回首页</a>
+</body>
+
+</html>

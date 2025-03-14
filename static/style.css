@@ -1,0 +1,110 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('/static/bg.jpg') no-repeat center center fixed; /* 插入背景图片 */
+    background-size: cover; /* 背景图片覆盖整个屏幕 */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: rgba(210, 180, 140, 80%); /* 使用rgba设置背景颜色以适应背景图片 */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    top: 50px; /* 调整“图书管理系统”位置 */
+}
+
+.main-content {
+    padding: 20px;
+    margin: 0 auto; /* 居中 */
+    max-width: 1200px; /* 可选：设置最大宽度以适应屏幕大小 */
+    width: 90%; /* 两边留出页边距 */
+    position: relative;
+    top: 100px; /* 调整按钮位置 */
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 表单居中 */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px; /* 可根据需要调整 */
+}
+
+.form-label {
+    display: block;
+    text-align: left; /* 提示文字左对齐 */
+    margin-bottom: 5px;
+}
+
+.form-input {
+    width: 100%; /* 文本框对齐 */
+    box-sizing: border-box;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center; /* 按钮居中 */
+    gap: 20px;
+}
+
+.book-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.book-item {
+    display: flex;
+    justify-content: space-between; /* 图书信息与图片分散对齐 */
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* 使用rgba设置背景颜色以适应背景图片 */
+}
+
+.book-info {
+    flex: 1;
+}
+
+.book-image {
+    margin-left: 20px;
+    max-width: 100px; /* 图片最大宽度以适应不同屏幕 */
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: rgba(210, 180, 140, 80%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgba(210, 180, 140, 80%);
+}
+
+label {
+    font-weight: bold;
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}

@@ -1,0 +1,49 @@
+<!-- update_book.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息管理</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>信息管理</h1>
+    </header>
+    <main class="main-content">
+        <form method="post" action="{{ url_for('update_book', book_id=book.id) }}">
+            <div class="form-group">
+                <label for="book_name">图书名称:</label>
+                <input type="text" id="book_name" name="book_name" value="{{ book.book_name }}">
+            </div>
+            <div class="form-group">
+                <label for="book_authors">作者:</label>
+                <input type="text" id="book_authors" name="book_authors" value="{{ book.book_authors }}">
+            </div>
+            <div class="form-group">
+                <label for="book_publisher">出版社:</label>
+                <input type="text" id="book_publisher" name="book_publisher" value="{{ book.book_publisher }}">
+            </div>
+            <div class="form-group">
+                <label for="book_publication_date">出版日期:</label>
+                <input type="date" id="book_publication_date" name="book_publication_date"
+                    value="{{ book.book_publication_date }}">
+            </div>
+            <div class="form-group">
+                <label for="book_price">价格:</label>
+                <input type="number" id="book_price" name="book_price" value="{{ book.book_price }}">
+            </div>
+            <div class="form-group">
+                <label for="book_img_url">图片链接:</label>
+                <input type="text" id="book_img_url" name="book_img_url" value="{{ book.book_img_url }}">
+            </div>
+            <button type="submit" class="button">更新</button>
+        </form>
+        <a href="/" class="button">返回首页</a>
+    </main>
+</body>
+
+</html>

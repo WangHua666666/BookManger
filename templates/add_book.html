@@ -1,0 +1,50 @@
+<!-- add_book.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加图书</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>添加图书</h1>
+    </header>
+    <main class="main-content">
+        <form method="post" action="{{ url_for('add_book') }}" class="form-container">
+            <div class="form-group">
+                <label for="book_name" class="form-label">图书名称:</label>
+                <input type="text" id="book_name" name="book_name" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="book_authors" class="form-label">作者:</label>
+                <input type="text" id="book_authors" name="book_authors" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="book_publisher" class="form-label">出版社:</label>
+                <input type="text" id="book_publisher" name="book_publisher" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="book_publication_date" class="form-label">出版日期:</label>
+                <input type="date" id="book_publication_date" name="book_publication_date" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="book_price" class="form-label">价格:</label>
+                <input type="number" id="book_price" name="book_price" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="book_img_url" class="form-label">图片链接:</label>
+                <input type="text" id="book_img_url" name="book_img_url" class="form-input">
+            </div>
+            <div class="button-group">
+                <button type="submit" class="button">添加</button>
+                <a href="/" class="button">返回首页</a>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>

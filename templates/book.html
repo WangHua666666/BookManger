@@ -1,0 +1,40 @@
+<!-- book.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书清单</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>图书清单</h1>
+    </header>
+    <main class="main-content">
+        <ul class="book-list">
+            <!-- 使用 Jinja2 的 for 循环遍历图书数据 -->
+            {% for book in books %}
+            <li class="book-item">
+                <div class="book-info">
+                    <!-- 显示图书编号 -->
+                    <p>图书编号: {{ book.id }}</p>
+                    <h2>{{ book.book_name }}</h2>
+                    <p>作者: {{ book.book_authors }}</p>
+                    <p>出版社: {{ book.book_publisher }}</p>
+                    <p>出版日期: {{ book.book_publication_date }}</p>
+                    <p>价格: {{ book.book_price }}</p>
+                </div>
+                <div class="book-image">
+                    <img src="{{ book.book_img_url }}" alt="{{ book.book_name }}" width="100">
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="/" class="button">返回首页</a>
+    </main>
+</body>
+
+</html>

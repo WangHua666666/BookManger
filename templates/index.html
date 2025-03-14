@@ -1,0 +1,27 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书管理系统</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>图书管理系统</h1>
+
+    </header>
+    <main class="main-content">
+        <div class="button-group">
+            <a href="/book" class="button">图书清单</a>
+            <a href="{{ url_for('manage_books') }}" class="button">信息管理</a>
+            <a href="/add_form" class="button">添加图书</a>
+            <a href="{{ url_for('search') }}" class="button">搜索图书</a> <!-- 新增搜索图书链接 -->
+        </div>
+    </main>
+</body>
+
+</html>
