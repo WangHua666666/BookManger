@@ -1,11 +1,11 @@
-**# BookManger - 图书管理应用**
+# BookManger - 图书管理应用
 
-**## 项目概述**
+## 项目概述
 
 BookManger是一个基于Flask和SQLAlchemy的简单图书管理应用。它允许用户管理图书信息，包括书名、作者、出版社、出版日期、价格和图书封面图片链接等。
 
-**## 项目结构**
-
+## 项目结构
+```markdown
 book-management-system/
 ├── static/
 │   ├── css/
@@ -22,11 +22,12 @@ book-management-system/
 ├── models.py
 ├── requirements.txt
 └── init_db.py
+```
 
 
-**## 安装与运行**
+## 安装与运行
 
-**### 克隆项目**
+### 克隆项目
 
 首先，将项目克隆到本地：
 
@@ -35,28 +36,27 @@ git clone [https://github.com/WangHua666666/BookManger.git]
 cd BookManger
 ```
 
-**### 创建虚拟环境并激活**
+### 创建虚拟环境并激活
 
 ```bash
 python -m venv venv
 source venv/bin/activate  # 对于Windows用户，使用 `venv\Scripts\activate````
 ```
 
-**### 安装依赖库**
+### 安装依赖库
 
 ```bash
 pip install -r requirements.txt
 ```
 
-**### 配置数据库**
-
+### 配置数据库
 本项目使用 SQLite 作为数据库，数据库文件名为books.db。数据库连接信息在app.py中配置：
 
 ``` python
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///books.db'
 ```
 
-**### 运行应用**
+### 运行应用
 
 在项目根目录下，使用以下命令启动 Flask 应用：
 
@@ -65,7 +65,7 @@ flask run
 ```
 应用将在本地的http://127.0.0.1:5000地址运行。
 
-**### 功能介绍**
+### 功能介绍
 
 #### 初始化数据库和添加初始书籍
 
@@ -78,7 +78,7 @@ flask run
 3. 编辑图书信息
 4. 删除图书
 
-**### 代码说明**
+### 代码说明
 
 app.py
 - 该文件是 Flask 应用的入口文件，主要包含以下内容：
@@ -106,6 +106,6 @@ models.py
 requirements.txt
 - 该文件列出了项目所需的依赖库。
 
-**### 总结**      
+### 总结      
 
 本项目是一个基于Flask和SQLAlchemy的简单图书管理应用，它允许用户管理图书信息，包括书名、作者、出版社、出版日期、价格和图书封面图片链接等。项目结构清晰，代码规范，功能完整，适合作为学习和实践Flask和SQLAlchemy的项目。   
